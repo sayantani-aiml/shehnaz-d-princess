@@ -2026,6 +2026,7 @@ body {
     .split-left .editorial-num { font-size: 8rem; }
     .values-grid { grid-template-columns: 1fr; }
 
+    
     .footer-top { grid-template-columns: 1fr; gap: 40px; }
     .footer-bottom-bar { flex-direction: column; gap: 15px; text-align: center; }
 
