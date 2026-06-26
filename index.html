@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahnaz D Princess | Luxury Beauty Parlour in Howrah & Shibpur</title>
+    <meta name="description" content="Experience premium beauty services at Shahnaz D Princess in Shibpur, Howrah. Rated 4.8★ by 811+ clients. We specialize in hair spas, facials, bridal makeup, waxing, and hair highlights in a relaxing, women-owned salon.">
+    <meta name="keywords" content="Beauty Parlour in Howrah, Salon in Shibpur, Hair Spa, Facial, Waxing, Bridal Makeup, Hair Highlights, Beauty Services in Howrah">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Shahnaz D Princess | Luxury Beauty Parlour in Howrah & Shibpur">
+    <meta property="og:description" content="Experience premium beauty services at Shahnaz D Princess in Shibpur, Howrah. Rated 4.8★ by 811+ clients.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.shahnazdprincess.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <div class="loader" id="loader">
+        <div class="loader-text" id="loaderText"></div>
+        <div class="loader-line"></div>
+    </div>
+
+    <nav class="nav" id="navbar">
+        <div class="nav-logo" onclick="showPage('home')">SHAHNAZ <span style="color:var(--rose)">D</span> PRINCESS</div>
+        <ul class="nav-links">
+            <li><a onclick="showPage('home')" data-page="home" class="active">Home</a></li>
+            <li><a onclick="showPage('services')" data-page="services">Services</a></li>
+            <li><a onclick="showPage('about')" data-page="about">About</a></li>
+            <li><a onclick="showPage('visit')" data-page="visit">Visit</a></li>
+            <li><a href="tel:+919831537921">Book</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="menuBtn" onclick="toggleMenu()">Menu</button>
+    </nav>
+
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-left">
+            <a class="menu-link" onclick="showPage('home'); toggleMenu();" onmouseenter="showMenuImg(0)">
+                <span class="menu-num">01</span>Home
+            </a>
+            <a class="menu-link" onclick="showPage('services'); toggleMenu();" onmouseenter="showMenuImg(1)">
+                <span class="menu-num">02</span>Services
+            </a>
+            <a class="menu-link" onclick="showPage('about'); toggleMenu();" onmouseenter="showMenuImg(2)">
+                <span class="menu-num">03</span>About
+            </a>
+            <a class="menu-link" onclick="showPage('visit'); toggleMenu();" onmouseenter="showMenuImg(3)">
+                <span class="menu-num">04</span>Visit
+            </a>
+        </div>
+        <div class="menu-right">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" class="menu-image active" alt="Home Menu">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" class="menu-image" alt="Services Menu">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f10d5e43?auto=format&fit=crop&w=800&q=80" class="menu-image" alt="About Menu">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" class="menu-image" alt="Visit Menu">
+        </div>
+        <div class="menu-footer">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://wa.me/919831537921" target="_blank">WhatsApp</a>
+            <a href="tel:+919831537921">+91 98315 37921</a>
+        </div>
+    </div>
+
+    <div class="page active" id="page-home">
+        <section class="hero">
+            <div class="hero-media">
+                <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=1920&q=80" alt="Shahnaz D Princess Luxury Beauty">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-eyebrow"><span>Luxury Beauty · Shibpur, Howrah · Est. with Love</span></div>
+                <h1 class="hero-title">
+                    <span class="line"><span>Reveal Your</span></span>
+                    <span class="line"><span><em>Beauty,</em></span></span>
+                    <span class="line"><span>Elevate Your Confidence</span></span>
+                </h1>
+                <div class="hero-bottom">
+                    <a href="tel:+919831537921" class="hero-cta">
+                        <span class="cta-line"></span>
+                        Book Your Experience
+                    </a>
+                </div>
+            </div>
+            <div class="hero-scroll">Scroll to explore</div>
+        </section>
+
+        <div class="marquee-strip">
+            <div class="marquee-inner">
+                <span><span class="dot"></span>4.8★ Rating</span>
+                <span><span class="dot"></span>811+ Reviews</span>
+                <span><span class="dot"></span>Women-Owned</span>
+                <span><span class="dot"></span>LGBTQ+ Friendly</span>
+                <span><span class="dot"></span>Hair Spa</span>
+                <span><span class="dot"></span>Bridal Makeup</span>
+                <span><span class="dot"></span>Facials</span>
+                <span><span class="dot"></span>Hair Highlights</span>
+                <span><span class="dot"></span>4.8★ Rating</span>
+                <span><span class="dot"></span>811+ Reviews</span>
+                <span><span class="dot"></span>Women-Owned</span>
+                <span><span class="dot"></span>LGBTQ+ Friendly</span>
+                <span><span class="dot"></span>Hair Spa</span>
+                <span><span class="dot"></span>Bridal Makeup</span>
+                <span><span class="dot"></span>Facials</span>
+                <span><span class="dot"></span>Hair Highlights</span>
+            </div>
+        </div>
+
+        <section class="split-editorial">
+            <div class="split-left">
+                <div class="editorial-num reveal">01</div>
+                <div class="editorial-tag reveal">Signature Experience</div>
+                <h2 class="reveal">The Art of <em>Radiant</em> Skin</h2>
+                <p class="editorial-body reveal">Our signature facials go beyond skincare — they are meditative rituals designed to restore luminosity from within. Using premium formulations and expert techniques, each treatment is a bespoke journey toward your most radiant self.</p>
+                <a class="text-link reveal" onclick="showPage('services')">
+                    Explore Facials
+                    <span class="arrow"></span>
+                </a>
+            </div>
+            <div class="split-right reveal-scale">
+                <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="Facial Treatment">
+                <span class="img-caption">Signature Glow Facial</span>
+            </div>
+        </section>
+
+        <section class="split-editorial" style="direction: rtl;">
+            <div class="split-left" style="direction: ltr;">
+                <div class="editorial-num reveal">02</div>
+                <div class="editorial-tag reveal">Color Artistry</div>
+                <h2 class="reveal">Where Color Meets <em>Confidence</em></h2>
+                <p class="editorial-body reveal">From hand-painted balayage to bold global transformations, our color specialists craft looks that feel effortlessly you. Every strand is a brushstroke in a masterpiece designed around your personality.</p>
+                <a class="text-link reveal" onclick="showPage('services')">
+                    Discover Hair Color
+                    <span class="arrow"></span>
+                </a>
+            </div>
+            <div class="split-right reveal-scale" style="direction: ltr;">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" loading="lazy" alt="Hair Highlights">
+                <span class="img-caption">Custom Highlights</span>
+            </div>
+        </section>
+
+        <section class="services-editorial">
+            <div class="se-header reveal">
+                <span class="se-tag">Our Craft</span>
+                <h2>The <em>Royal</em><br>Treatment</h2>
+            </div>
+            <div class="service-spread">
+                <div class="service-spread-item reveal-scale" onclick="showPage('services')">
+                    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Bridal Makeup">
+                    <div class="service-spread-content">
+                        <span class="ss-num">Chapter 03</span>
+                        <h3>Bridal Artistry</h3>
+                        <p>Breathtaking bridal looks crafted for your unforgettable moment — from veil to vow.</p>
+                        <span class="service-tag-pill">Bridal</span>
+                        <span class="service-tag-pill">Makeup</span>
+                    </div>
+                </div>
+                <div class="service-spread-item reveal-scale" onclick="showPage('services')">
+                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=900&q=80" loading="lazy" alt="Hair Spa">
+                    <div class="service-spread-content">
+                        <span class="ss-num">Chapter 04</span>
+                        <h3>Luxury Hair Spa</h3>
+                        <p>Deep nourishment rituals that transform brittle strands into cascading silk.</p>
+                        <span class="service-tag-pill">Hair Care</span>
+                        <span class="service-tag-pill">Spa</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service-feature-full reveal-scale" onclick="showPage('services')">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=80" loading="lazy" alt="Complete Grooming">
+                <div class="sff-content">
+                    <span class="ss-num">Chapter 05</span>
+                    <h3>Complete <em>Grooming</em> Rituals</h3>
+                    <p>Waxing, threading, and meticulous body care — precision meets pampering in every session.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote-bg-text">Beauty</div>
+            <div class="quote-content reveal">
+                <span class="quote-mark">"</span>
+                <blockquote>The staff is incredibly polite and the whole atmosphere is so relaxing. I came in for a facial treatment and left feeling completely rejuvenated. Highly recommend this salon in Shibpur.</blockquote>
+                <div class="quote-author">Anjali S. <span>— Verified Client</span></div>
+            </div>
+        </section>
+
+        <section class="hz-gallery" id="hzGallery">
+            <div class="hz-gallery-header">
+                <div class="editorial-tag">Portfolio</div>
+                <h2>Transformations</h2>
+            </div>
+            <div class="hz-track" id="hzTrack">
+                <div class="hz-item">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=700&q=80" loading="lazy" alt="Hair Transformation">
+                    <div class="hz-item-caption">
+                        <h4>Golden Balayage</h4>
+                        <p>Hair Color</p>
+                    </div>
+                </div>
+                <div class="hz-item">
+                    <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=700&q=80" loading="lazy" alt="Makeup Portfolio">
+                    <div class="hz-item-caption">
+                        <h4>Editorial Glam</h4>
+                        <p>Makeup Artistry</p>
+                    </div>
+                </div>
+                <div class="hz-item">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=700&q=80" loading="lazy" alt="Skincare Glow">
+                    <div class="hz-item-caption">
+                        <h4>Radiance Facial</h4>
+                        <p>Skin Care</p>
+                    </div>
+                </div>
+                <div class="hz-item">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80" loading="lazy" alt="Styling Blowout">
+                    <div class="hz-item-caption">
+                        <h4>Luxury Blow-dry</h4>
+                        <p>Styling</p>
+                    </div>
+                </div>
+                <div class="hz-item">
+                    <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" loading="lazy" alt="Spa Treatment">
+                    <div class="hz-item-caption">
+                        <h4>Deep Conditioning</h4>
+                        <p>Hair Spa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-editorial">
+            <div class="te-layout">
+                <div class="te-sticky">
+                    <div class="editorial-tag reveal">Voices</div>
+                    <h2 class="reveal">Words from Our <em>Princesses</em></h2>
+                    <div class="te-rating reveal">
+                        <span class="stars">★★★★★</span>
+                        <span>4.8 / 5 · 811+ Reviews</span>
+                    </div>
+                </div>
+                <div class="te-cards">
+                    <div class="te-card reveal">
+                        <blockquote>"The staff is incredibly polite and the whole atmosphere is so relaxing. I came in for a facial treatment and left feeling completely rejuvenated. Highly recommend this salon in Shibpur!"</blockquote>
+                        <div class="te-author">
+                            <div class="te-author-avatar">AS</div>
+                            <div class="te-author-info">
+                                <div class="name">Anjali S.</div>
+                                <div class="detail">Facial Treatment</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="te-card reveal">
+                        <blockquote>"Best hair highlights I've ever had! Professional service from start to finish. Shahnaz D Princess is definitely my go-to beauty parlour in Howrah for all things hair and skin. 100% customer satisfaction."</blockquote>
+                        <div class="te-author">
+                            <div class="te-author-avatar">PM</div>
+                            <div class="te-author-info">
+                                <div class="name">Priya M.</div>
+                                <div class="detail">Hair Highlights</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="te-card reveal">
+                        <blockquote>"I got my bridal makeup done here and I looked absolutely gorgeous. The team understood exactly what I wanted. The entire experience was magical and stress-free!"</blockquote>
+                        <div class="te-author">
+                            <div class="te-author-avatar">SR</div>
+                            <div class="te-author-info">
+                                <div class="name">Sneha R.</div>
+                                <div class="detail">Bridal Makeup</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="page" id="page-services">
+        <div class="services-page-editorial">
+            <div class="sp-hero">
+                <div class="sp-hero-content">
+                    <span class="editorial-tag">The Menu</span>
+                    <h1>Our <em>Craft,</em><br>Your Canvas</h1>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 01</span>
+                        <h3 class="reveal">Hair Color & <em>Highlights</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Expert color artistry — from sun-kissed balayage to bold global transformations.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Balayage / Ombre</div>
+                        <div class="sl-desc">Hand-painted, natural-looking sweeping highlights for effortless dimension.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Global Hair Color</div>
+                        <div class="sl-desc">Premium, ammonia-free full coverage and gloss for rich, lasting color.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Root Touch-Up</div>
+                        <div class="sl-desc">Seamless blending for perfect color continuity from root to tip.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Highlights / Lowlights</div>
+                        <div class="sl-desc">Dimensional color for depth, movement, and visual texture.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 02</span>
+                        <h3 class="reveal">Facials & <em>Skin Care</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Bespoke skin rituals that restore luminosity and nurture your natural glow.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Signature Glow Facial</div>
+                        <div class="sl-desc">Deep cleansing, exfoliation, and a hydrating mask for instant radiance.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Anti-Aging Therapy</div>
+                        <div class="sl-desc">Firming treatments using premium, skin-safe serums for youthful elasticity.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">De-Tan Treatment</div>
+                        <div class="sl-desc">Gentle removal of sun damage to restore your natural, even tone.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Gold Facial</div>
+                        <div class="sl-desc">Luxurious gold-infused treatment for luminous, photo-ready skin.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 03</span>
+                        <h3 class="reveal">Bridal & <em>Makeup</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Breathtaking artistry for the most important moments of your life.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Bridal Makeup Package</div>
+                        <div class="sl-desc">Complete bridal look including draping, hairstyling, and flawless makeup.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Party / Guest Makeup</div>
+                        <div class="sl-desc">Flawless, long-lasting makeup for special occasions and celebrations.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Engagement Makeup</div>
+                        <div class="sl-desc">Elegant and photogenic makeup crafted for your engagement ceremony.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 04</span>
+                        <h3 class="reveal">Hair Care & <em>Styling</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Nourishment, precision, and styling artistry for your crowning glory.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Luxury Hair Spa</div>
+                        <div class="sl-desc">Deep conditioning treatment for nourished, silky, salon-worthy hair.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Haircut & Styling</div>
+                        <div class="sl-desc">Precision cuts and professional blow-dry styling for any occasion.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Keratin Treatment</div>
+                        <div class="sl-desc">Smoothing treatment for frizz-free, manageable, mirror-shine hair.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 05</span>
+                        <h3 class="reveal">Waxing & <em>Threading</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Precision grooming with gentle, premium-quality products.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Full Arms Waxing</div>
+                        <div class="sl-desc">Smooth, hair-free arms with premium, skin-safe wax.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Full Legs Waxing</div>
+                        <div class="sl-desc">Complete leg waxing for silky-smooth, touchable skin.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Full Body Waxing</div>
+                        <div class="sl-desc">Head-to-toe grooming with gentle, hypoallergenic wax.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Eyebrow Threading</div>
+                        <div class="sl-desc">Perfectly shaped brows with precise, expert threading.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Full Face Threading</div>
+                        <div class="sl-desc">Complete facial threading for a clean, polished look.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-chapter">
+                <div class="chapter-header">
+                    <div class="ch-left">
+                        <span class="ch-num reveal">Chapter 06</span>
+                        <h3 class="reveal">Grooming <em>Packages</em></h3>
+                    </div>
+                    <div class="ch-right reveal">
+                        <p>Curated combinations for the ultimate pampering experience.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Princess Package</div>
+                        <div class="sl-desc">Facial + Hair Spa + Manicure + Pedicure — the complete royal treatment.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Royal Glow Package</div>
+                        <div class="sl-desc">Full body wax + Facial + Threading + Blow-dry for head-to-toe radiance.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                    <div class="service-list-item reveal">
+                        <div class="sl-name">Weekend Refresh</div>
+                        <div class="sl-desc">Quick pampering: Cleanup + Threading + Blow-dry for an instant lift.</div>
+                        <div class="sl-price">On Consultation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="page-about">
+        <div class="about-editorial">
+            <div class="about-hero">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1600&q=80" loading="lazy" alt="About Shahnaz D Princess">
+                <div class="about-hero-text">
+                    <span class="editorial-tag">Our Story</span>
+                    <h1>The <em>Princess</em><br>Manifesto</h1>
+                </div>
+            </div>
+
+            <section class="about-manifesto">
+                <div class="manifesto-layout">
+                    <div class="manifesto-sticky">
+                        <div class="editorial-tag reveal">Philosophy</div>
+                        <h2 class="reveal">Where Every Woman Feels Like <em>Royalty</em></h2>
+                    </div>
+                    <div class="manifesto-text">
+                        <div class="manifesto-block reveal">
+                            <span class="m-label">Origin</span>
+                            <p>Located in the heart of <strong>Shibpur, Howrah</strong>, Shahnaz D Princess was founded on a simple philosophy: <strong>every woman deserves to feel like royalty</strong>. Not just on her wedding day, not just on special occasions — but every single time she walks through our doors.</p>
+                        </div>
+                        <div class="manifesto-block reveal">
+                            <span class="m-label">Sanctuary</span>
+                            <p>As a proudly <strong>women-owned enterprise</strong>, we have cultivated a safe, welcoming, and <strong>LGBTQ+ friendly sanctuary</strong> where you can escape the rush of daily life. From the ambient lighting to the soothing music, every detail is designed to calm your mind while we pamper your body.</p>
+                        </div>
+                        <div class="manifesto-block reveal">
+                            <span class="m-label">Artistry</span>
+                            <p>We don't believe in "one size fits all." Our team of highly trained artisans combines the latest techniques with time-tested beauty wisdom to deliver results that speak for themselves. Every hair spa, facial, and styling session is <strong>tailored specifically to your unique features and desires</strong>.</p>
+                        </div>
+                        <div class="manifesto-block reveal">
+                            <span class="m-label">Trust</span>
+                            <p>With a <strong>4.8★ rating and over 811 genuine reviews</strong>, we are deeply grateful for the unwavering trust our community has placed in us. Customer satisfaction isn't just a goal; <strong>it is our standard</strong>. And it's a standard we renew with every single client we serve.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="values-section">
+                <div class="values-header">
+                    <span class="editorial-tag reveal">Principles</span>
+                    <h2 class="reveal">Why Choose <em>Us</em></h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-item reveal">
+                        <div class="v-icon"><i class="fas fa-hands"></i></div>
+                        <h3>Professional Artisans</h3>
+                        <p>Highly trained specialists passionate about the science and art of beauty.</p>
+                    </div>
+                    <div class="value-item reveal">
+                        <div class="v-icon"><i class="fas fa-feather-alt"></i></div>
+                        <h3>Relaxing Atmosphere</h3>
+                        <p>Every detail — from lighting to music — is designed to create a meditative escape.</p>
+                    </div>
+                    <div class="value-item reveal">
+                        <div class="v-icon"><i class="fas fa-fingerprint"></i></div>
+                        <h3>Personalized Service</h3>
+                        <p>Every session is tailored specifically to your unique features, skin, and desires.</p>
+                    </div>
+                    <div class="value-item reveal">
+                        <div class="v-icon"><i class="fas fa-crown"></i></div>
+                        <h3>Years of Trust</h3>
+                        <p>4.8★ across 811+ reviews — satisfaction isn't a goal, it's our unwavering standard.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="page" id="page-visit">
+        <div class="visit-editorial">
+            <div class="visit-hero">
+                <img src="https://images.unsplash.com/photo-1521017432531-fbd92076e433?auto=format&fit=crop&w=1600&q=80" loading="lazy" alt="Visit Us">
+                <div class="visit-hero-text">
+                    <span class="editorial-tag">Find Us</span>
+                    <h1>Let Us <em>Pamper</em> You</h1>
+                </div>
+            </div>
+
+            <section class="visit-content">
+                <div class="visit-layout">
+                    <div class="visit-info">
+                        <div class="editorial-tag reveal">The Sanctuary</div>
+                        <h2 class="reveal">Visit Our World</h2>
+
+                        <div class="visit-detail reveal">
+                            <div class="vd-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>131, Grand Trunk Road,<br>Above Frank Ross Pharmacy, Vivek Vihar,<br>Naora, Shibpur, Howrah,<br>West Bengal 711102</p>
+                            </div>
+                        </div>
+
+                        <div class="visit-detail reveal">
+                            <div class="vd-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Connect</h4>
+                                <p>+91 98315 37921</p>
+                            </div>
+                        </div>
+
+                        <div class="visit-detail reveal">
+                            <div class="vd-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon – Sat: 10:30 AM – 8:00 PM<br>Sunday: 10:00 AM – 8:30 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="visit-actions reveal">
+                            <a href="https://maps.google.com" target="_blank" class="visit-btn primary"><i class="fas fa-map-marker-alt"></i> Directions</a>
+                            <a href="tel:+919831537921" class="visit-btn outline"><i class="fas fa-phone"></i> Call Now</a>
+                            <a href="https://wa.me/919831537921" target="_blank" class="visit-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <div class="visit-map reveal-right">
+                        <iframe src="https://maps.google.com/maps?q=Shahnaz+D+Princess,+131,+Grand+Trunk+Road,+Shibpur,+Howrah&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hours-editorial">
+                <div class="hours-layout">
+                    <div class="hours-left reveal">
+                        <h2>When We <em>Welcome</em> You</h2>
+                        <p>Our doors are open throughout the week. Walk-ins are welcome, but we recommend booking ahead for bridal and specialized treatments.</p>
+                    </div>
+                    <div class="hours-list reveal">
+                        <div class="hours-row"><span class="day">Monday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Tuesday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Wednesday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Thursday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Friday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Saturday</span><span class="time">10:30 AM – 8:00 PM</span></div>
+                        <div class="hours-row"><span class="day">Sunday</span><span class="time">10:00 AM – 8:30 PM</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer-editorial">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="f-logo">SHAHNAZ <span>D</span> PRINCESS</span>
+                <p>A luxury beauty sanctuary in the heart of Shibpur, Howrah. Where every woman is treated like royalty — expert beauty care, personalized service, and a deeply meditative atmosphere.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/919831537921" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#" onclick="showPage('services')">Services</a></li>
+                    <li><a href="#" onclick="showPage('about')">About</a></li>
+                    <li><a href="#" onclick="showPage('visit')">Visit Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#" onclick="showPage('services')">Hair Color</a></li>
+                    <li><a href="#" onclick="showPage('services')">Facials</a></li>
+                    <li><a href="#" onclick="showPage('services')">Bridal Makeup</a></li>
+                    <li><a href="#" onclick="showPage('services')">Hair Spa</a></li>
+                    <li><a href="#" onclick="showPage('services')">Grooming</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+919831537921">+91 98315 37921</a></li>
+                    <li><a href="#">Shibpur, Howrah</a></li>
+                    <li><a href="#">West Bengal 711102</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-bar">
+            <p>© 2026 Shahnaz D Princess · All Rights Reserved</p>
+            <button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                <i class="fas fa-arrow-up"></i> Back to Top
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Shahnaz D Princess",
+        "description": "Luxury beauty parlour in Shibpur, Howrah offering hair spas, facials, bridal makeup, waxing, and hair highlights.",
+        "image": "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=1200&q=80",
+        "telephone": "+919831537921",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "131, Grand Trunk Road, Above Frank Ross Pharmacy, Vivek Vihar, Naora",
+            "addressLocality": "Shibpur, Howrah",
+            "addressRegion": "West Bengal",
+            "postalCode": "711102",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "22.565",
+            "longitude": "88.3175"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "10:30",
+                "closes": "20:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "20:30"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "811"
+        },
+        "priceRange": "$$",
+        "url": "https://www.shahnazdprincess.com"
+    }
+    </script>
+</body>
+</html>
